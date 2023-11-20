@@ -1,5 +1,5 @@
 nav {
-  background: rgba(21, 23, 56, 0.843);
+  background: rgba(104, 110, 211, 0.843);
   width: max-content;
   display:flex;
   flex-direction: column;
@@ -12,6 +12,8 @@ nav {
   gap: 0.8rem;
   border-radius: 3rem;
   backdrop-filter: blur(15px);
+  height:94vh;
+  justify-content: center;
 }
 
 nav a {
