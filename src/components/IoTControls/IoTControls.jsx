@@ -12,29 +12,34 @@ const IoTControls = () => {
     fontSize:'70px'
   }
 
-  const [light, setLight] = useState("Light Info")
+const [light, setLight] = useState("Light Info")
 
 const handleLightChange = () => {
-  const light = [ "Sally", "Lema", "Merseret", "Chitra", "Jocelyn"
+  const light = [ 
+    // "Sally", "Lema", "Merseret", "Chitra", "Jocelyn"
     
-  //   {
-  //   id: 1,
-  //   name: "Device 1",
-  //   state: true,
-  // },
-  // {
-  //   id: 2,
-  //   name: "Device 2",
-  //   state: true,
-  // }
-    
+    {
+    id: 1,
+    name: "Device 1",
+    state: true,
+  },
+  {
+    id: 2,
+    name: "Device 2",
+    state: true,
+  } 
   ];
-  const int = Math.floor(Math.random() * 5);
-  // setName will be pick a name from array above and push that name into current spot of "Josh"
-  setLight(light[int]);
+
+  const lightDeviceAll = light.map(({id, name, state}) => {
+    return (
+      <div key={id} className="device">
+        <h1>{name}</h1>
+        <h1>{state}</h1>
+      </div>
+    )
+  })
+  setLight(lightDeviceAll);
 };
-
-
 
   return (
     <section id="iotControls">
@@ -56,6 +61,7 @@ const handleLightChange = () => {
           <h5>Other</h5>
         </article>
       </div>
+
       <div className="light-content">
         {light}
       </div>
