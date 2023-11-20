@@ -1,0 +1,40 @@
+#iotControls {
+    background-color: rgb(225, 221, 216);
+    padding: 50px;
+    margin-left: 240px;
+    border-radius: 30px;
+    display: flex;
+    height: 100vh;
+
+  }
+
+.iotControls-main {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  background-color:rgb(74, 175, 175);
+  padding: 20px;
+  height: 20vh;
+  width: 100vw;
+  border-radius: 1rem;;
+}
+
+
+.control__card {
+  background: var(--color-primary-variant);
+  border: 1px solid transparent;
+  border-radius: 6rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: var(--transition);
+  width: 15vw;
+  font-size: 30px;
+  line-height: 0;
+}
+
+.control__card:hover {
+  background: var(--color-bg-variant);
+  border-color: var(--color-bg-variant);
+  cursor: default;
+}
