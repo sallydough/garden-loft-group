@@ -2,9 +2,10 @@
     background-color: rgb(225, 221, 216);
     padding: 50px;
     margin-left: 240px;
+    margin-bottom: 20px;
     border-radius: 30px;
     display: flex;
-    height: 100vh;
+    flex-direction: column;
     width: 80vw;
     height: 91vh;
   }
@@ -17,8 +18,8 @@
   background-color:rgb(74, 175, 175);
   padding: 20px;
   height: 20vh;
-  width: 100vw;
-  border-radius: 1rem;;
+
+  border-radius: 1rem;
 }
 
 
@@ -38,4 +39,12 @@
   background: var(--color-bg-variant);
   border-color: var(--color-bg-variant);
   cursor: default;
+}
+
+.light-content {
+  font-size: 80px;
+  background-color: rgba(116, 173, 227, 0.551);
+  border-radius: 8rem;
+  width: 30%;
+  margin-top: 10px;
 }
