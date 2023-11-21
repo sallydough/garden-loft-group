@@ -118,12 +118,7 @@ const IoTControls = () => {
    *    else setLock(false)
    * })
    */
-
-  // if iotData ===on {
-    // setLock = true
-    // if iotData ===off 
-    // setlock= false
-  }
+  
   const [lock, setLock] = useState(false);
 
   let greenBackground = {
