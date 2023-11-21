@@ -14,9 +14,9 @@ function App() {
       <Nav />
       <HomePage/>
       <IoTControls/>
-      <Contacts/>
-      <Calendar/>
       <Entertainment/>
+      <Calendar/>
+      <Contacts/>
       <Settings/>
     </div>
   );
