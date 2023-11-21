@@ -99,20 +99,55 @@ const IoTControls = () => {
     },
   }));
 
-  // const [lock, setLock] = useState("false");
+  // const lock = [
+  //   {
+  //     id: 1,
+  //     icon: '<LockOpenIcon />',
+  //     toggle: 'defaultChecked',
+  //   }
+
+    
+  // ]
+
+  // TODO check what the original state is when the component
+  // is mounted instead of defaulting to false
+  // TODO listen for changes on external light switch data
+  /**
+   * IOTListener((lightData) => {
+   *    if(lightData.on) setLock(true)
+   *    else setLock(false)
+   * })
+   */
+
+  // if iotData ===on {
+    // setLock = true
+    // if iotData ===off 
+    // setlock= false
+  }
+  const [lock, setLock] = useState(false);
+
+  let greenBackground = {
+    backgroundColor: 'green'
+  }
+  let greyBackground = {
+    backgroundColor: 'grey'
+  }
 
   // if lock is locked, status: true / button is green / lock picture is locked
-  // const handleLockChange = () => {
-  //   const lock = [
-  //     {
-  //       id: 1,
-  //       icon: '<LockOpenIcon />',
-  //       toggle: 'defaultChecked',
-  //     }
+  const handleLockChange = () => {
+    setLock(!lock)
 
-      
-  //   ]
-  // };
+    if(lock) {
+      console.log("Lock is on")
+      // color to be green
+      // lockStyle.backgroundColor = 'green'
+    } else {
+      console.log("lock is off")
+      // lockStyle.backgroundColor = 'grey'
+      // color to be grey
+    }
+    // console.log("Lock is " + lock ? "on" : "off")
+  };
 
   return (
     <section id="iotControls">
@@ -137,12 +172,12 @@ const IoTControls = () => {
 
       <div className="light-content">{light}</div>
 
-      <div className="lock-content">
+      <div className="lock-content" style={ lock ? greenBackground : greyBackground}>
         <LockIcon />
         {/* {lock} */}
         <Stack direction="row" spacing={1} alignItems="center">
         <Typography>Off</Typography>
-        <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
+        <AntSwitch onClick={handleLockChange} defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
         <Typography>On</Typography>
       </Stack>
       </div>
