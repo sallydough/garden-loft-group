@@ -9,7 +9,7 @@ import Switch from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { styled } from "@mui/material";
-import LockOpenIcon from '@mui/icons-material/LockOpen';
+// import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 const IoTControls = () => {
   const iconStyle = {
