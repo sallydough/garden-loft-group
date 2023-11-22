@@ -1,5 +1,5 @@
 #contact-favorite-container {
-  background-color: rgb(199, 199, 199);
+  background-color: rgb(3, 57, 93);
   border-radius: 3rem;
   padding: 25px;
   width: 30%;
@@ -15,9 +15,13 @@
   gap: 1rem;
   text-align: left;
   font-size: 15px;
-  background-color: rgb(47, 102, 109);
+  background-color: rgb(140, 222, 233);
   margin: 1rem;
   border-radius: 1rem;
   padding: 20px 30px 20px 30px;
   height: 13%
+}
+
+.contact-info {
+  color:rgb(34, 39, 49);
 }
