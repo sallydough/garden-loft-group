@@ -44,7 +44,7 @@ const Lights = () => {
     ];
 
     // maps through array of light devices and displays them in useState component {light} below
-    const lightDeviceAll = light.map(({ id, name, state }) => {
+    const lightDeviceAll = light.map(({ id, name }) => {
       return (
         <div key={id} className="device">
           <LightbulbIcon style={iconStyle} />
@@ -54,6 +54,8 @@ const Lights = () => {
         <AntSwitch style={iconStyle} defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
         <Typography>On</Typography>
       </Stack>
+
+      
         </div>
       );
     });
