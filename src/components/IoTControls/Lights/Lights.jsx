@@ -46,23 +46,57 @@ const Lights = () => {
     // maps through array of light devices and displays them in useState component {light} below
     const lightDeviceAll = light.map(({ id, name }) => {
       return (
-        <div key={id} className="device lock-content"style={ lock ? greenBackground : greyBackground}>
+        <div key={id} className="device lock-content" style={lock ? greenBackground : greyBackground}>
           <LightbulbIcon style={iconStyle} />
           <h1>{name}</h1>
-        <Stack direction="row" spacing={1} alignItems="center">
-        <Typography>Off</Typography>
-        <AntSwitch onClick={handleLockChange} defaultChecked inputProps={{ 'aria-label': 'ant design' }}  />
-        <Typography>On</Typography>
-      </Stack>
-      <div onClick={toggleSwitch} className='light-switch'>Change Light</div>
-      </div>
-  
+          <Stack direction="row" spacing={1} alignItems="center">
+            <Typography>Off</Typography>
+            <AntSwitch onClick={handleLockChange} defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
+            <Typography>On</Typography>
+          </Stack>
+          <div onClick={toggleSwitch} className='light-switch'>Change Light</div>
+        </div>
       );
     });
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const lightDeviceAll = light.map(({ id, name }) => {
+    //   return (
+    //     <div key={id} className="device lock-content"style={ lock ? greenBackground : greyBackground}>
+    //       <LightbulbIcon style={iconStyle} />
+    //       <h1>{name}</h1>
+    //     <Stack direction="row" spacing={1} alignItems="center">
+    //     <Typography>Off</Typography>
+    //     <AntSwitch onClick={handleLockChange} defaultChecked inputProps={{ 'aria-label': 'ant design' }}  />
+    //     <Typography>On</Typography>
+    //   </Stack>
+    //   <div onClick={toggleSwitch} className='light-switch'>Change Light</div>
+    //   </div>
+  
+    //   );
+    // });
 
     setLight(lightDeviceAll);
   };
-
   // lock usestate
   // useState for changing color of lock
 const [lock, setLock] = useState(false);
