@@ -68,10 +68,11 @@ align-items: center;
 border-radius: 2rem;
 padding: 0 2rem;
 color: black;
+height: 50vh;
 /* width: 80vw; */
 }
 
-
+/* 
 
 .lock-content {
 display: flex;
@@ -83,4 +84,4 @@ border-radius: 60px;
 align-items: center;
 height: 10vh;
 justify-content: center;
-}
+} */
