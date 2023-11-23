@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './lock.css'
 import IoTControls from '../IoTControls'
 

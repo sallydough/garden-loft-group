@@ -2,13 +2,10 @@
 
 :root {
   font-family: Open Sans, DM Sans, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-
   padding: 10px;
   background-color: rgb(55, 53, 53);
   color:azure;

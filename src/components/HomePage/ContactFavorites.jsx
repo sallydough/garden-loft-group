@@ -1,11 +1,11 @@
-import React from 'react'
+
 import './contactFavorites.css'
 import FaceIcon from '@mui/icons-material/Face';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 
 const ContactFavorites = () => {
   const iconStyle = {
-    fontSize:'70px',
+    fontSize:'120px',
     color: "rgb(25, 35, 51)"
   }
 

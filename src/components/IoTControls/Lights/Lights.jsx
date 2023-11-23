@@ -1,10 +1,9 @@
-import React from 'react'
+
 import './lights.css'
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import ThermostatIcon from "@mui/icons-material/Thermostat";
 import HttpsIcon from "@mui/icons-material/Https";
 import DevicesOtherIcon from "@mui/icons-material/DevicesOther";
-import LockIcon from "@mui/icons-material/Lock";
 import { useState } from "react";
 import Switch from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
@@ -24,17 +23,22 @@ const Lights = () => {
     const light = [
       {
         id: 1,
-        name: "Device 1",
+        name: "Living Room",
         state: true,
       },
       {
         id: 2,
-        name: "Device 2",
+        name: "Bedroom",
         state: true,
       },
       {
         id: 3,
-        name: "Device 3",
+        name: "Bathroom",
+        state: true,
+      },
+      {
+        id: 4,
+        name: "Dining Room",
         state: true,
       },
     ];
@@ -43,11 +47,11 @@ const Lights = () => {
     const lightDeviceAll = light.map(({ id, name, state }) => {
       return (
         <div key={id} className="device">
+          <LightbulbIcon style={iconStyle} />
           <h1>{name}</h1>
-          <h1>{state}</h1>
           <Stack direction="row" spacing={1} alignItems="center">
         <Typography>Off</Typography>
-        <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
+        <AntSwitch style={iconStyle} defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
         <Typography>On</Typography>
       </Stack>
         </div>
@@ -120,63 +124,31 @@ const Lights = () => {
    * })
    */
   
-  const [lock, setLock] = useState(false);
-
-  let greenBackground = {
-    backgroundColor: 'green'
-  }
-  let greyBackground = {
-    backgroundColor: 'grey'
-  }
-
-  // if lock is locked, status: true / button is green / lock picture is locked
-  const handleLockChange = () => {
-    setLock(!lock)
-
-    if(lock) {
-      console.log("Lock is on")
-      // color to be green
-      // lockStyle.backgroundColor = 'green'
-    } else {
-      console.log("lock is off")
-      // lockStyle.backgroundColor = 'grey'
-      // color to be grey
-    }
-    // console.log("Lock is " + lock ? "on" : "off")
-  };
 
   return (
-    <section id="iotControls">
-      <div className="iotControls-main">
-        <article onClick={handleLightChange} className="control__card">
+    <section id="lightControls">
+      <div className="lightControls-main">
+        <article onClick={handleLightChange} className="control__card-light">
           <LightbulbIcon style={iconStyle} />
           <h5>Lights</h5>
         </article>
-        <article onClick={handleLightChange} className="control__card">
+        <article onClick={handleLightChange} className="control__card-light">
           <ThermostatIcon style={iconStyle} />
           <h5>Temperature</h5>
         </article>
-        <article onClick={handleLightChange} className="control__card">
+        <article onClick={handleLightChange} className="control__card-light">
           <HttpsIcon style={iconStyle} />
           <h5>Lock</h5>
         </article>
-        <article onClick={handleLightChange} className="control__card">
+        <article onClick={handleLightChange} className="control__card-light">
           <DevicesOtherIcon style={iconStyle} />
           <h5>Other</h5>
         </article>
       </div>
 
-      <div className="light-content">{light}</div>
+      <div className="lights-content">{light}</div>
 
-      <div className="lock-content" style={ lock ? greenBackground : greyBackground}>
-        <LockIcon />
-        {/* {lock} */}
-        <Stack direction="row" spacing={1} alignItems="center">
-        <Typography>Off</Typography>
-        <AntSwitch onClick={handleLockChange} defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
-        <Typography>On</Typography>
-      </Stack>
-      </div>
+      
     </section>
   );
 };

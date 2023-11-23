@@ -2,6 +2,10 @@
   background-color: #F0F0F0;;
   border-radius: 2rem;
   padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
   height: 25vh;
 }
 
@@ -10,4 +14,21 @@
   font-size: 30px;
   text-align: end;
   color: rgb(19, 19, 19);
+}
+
+.greeting-change h1{
+  margin:0;
+  margin-top: 2px;
+  font-size: 40px;
+}
+
+.date-time p {
+color: black;
+font-size: 60px;
+margin: 0;
+}
+
+p.currentTime{
+  font-size: 90px;
+  font-weight: 700;
 }

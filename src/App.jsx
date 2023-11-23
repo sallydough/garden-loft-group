@@ -7,6 +7,7 @@ import Calendar from './components/Calendar/Calendar'
 import Entertainment from './components/Entertainment/Entertainment'
 import Settings from './components/Settings/Settings'
 import Lights from "./components/IoTControls/Lights/Lights";
+import AC from "./components/IoTControls/Temp/AC";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <IoTControls/>
       <Lights />
       <Entertainment/>
+      <AC />
       <Calendar/>
       <Contacts/>
       <Settings/>

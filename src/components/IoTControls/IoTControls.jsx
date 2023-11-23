@@ -3,11 +3,13 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import ThermostatIcon from "@mui/icons-material/Thermostat";
 import HttpsIcon from "@mui/icons-material/Https";
 import DevicesOtherIcon from "@mui/icons-material/DevicesOther";
-import LockIcon from "@mui/icons-material/Lock";
+// import { Link } from "react-router-dom";
+// import Lights from "./Lights/Lights";
+
 
 const IoTControls = () => {
   const iconStyle = {
-    fontSize: "70px",
+    fontSize: "170px",
   };
 
 const handleLightChange = () => {
@@ -17,10 +19,13 @@ const handleLightChange = () => {
   return (
     <section id="iotControls">
       <div className="iotControls-main">
-        <article onClick={handleLightChange} className="control__card">
+      {/* <Link to='path' element={<Lights />}>  */}
+       <article onClick={handleLightChange} className="control__card">
           <LightbulbIcon style={iconStyle} />
           <h5>Lights</h5>
         </article>
+        {/* </Link> */}
+
         <article onClick={handleLightChange} className="control__card">
           <ThermostatIcon style={iconStyle} />
           <h5>Temperature</h5>

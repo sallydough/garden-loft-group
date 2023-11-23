@@ -1,5 +1,5 @@
 nav {
-  background: rgba(247, 247, 247, 0.843);
+  background: #F0F0F0;
   width: max-content;
   display:flex;
   flex-direction: column;
@@ -13,7 +13,9 @@ nav {
   border-radius: 3rem;
   backdrop-filter: blur(15px);
   height:85vh;
+  padding-top: 40px;
   justify-content: center;
+  margin-left: 5px;
 }
 
 nav a {
@@ -34,5 +36,13 @@ nav a:hover {
 
 nav a.active {
   background: var(--color-primary);
-  color: var(--color-white);
+  color: rgb(57, 57, 59);
+}
+
+nav .logo {
+  width: 90px;
+}
+
+nav .logo:hover {
+  color:aliceblue;
 }

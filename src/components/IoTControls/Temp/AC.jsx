@@ -1,5 +1,5 @@
-import React from 'react'
-import React, { useState } from 'react';
+
+import { useState } from 'react';
 
 const AC = () => {
   const [temperatureValue, setTemperatureValue] = useState(10);

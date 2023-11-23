@@ -1,6 +1,7 @@
-import React from "react";
+
 import "./nav.css";
-import CabinIcon from "@mui/icons-material/Cabin";
+import logo from './garden-loft.png'
+
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import BroadcastOnHomeIcon from '@mui/icons-material/BroadcastOnHome';
@@ -18,7 +19,7 @@ const [activeNav, setActiveNav] = useState('#homepage')
   return (
     <nav className="navbar-container">
       <a  href="#homepage" onClick={() => setActiveNav('#homepage')} className={activeNav === '#homepage' ? 'active' : ''}>
-        <CabinIcon style={iconStyle}/>
+        <img className='logo' src={logo} alt="" />
         <h1>Home</h1>
       </a>
       <a href="#iotControls" onClick={() => setActiveNav('#iotControls')} className={activeNav === '#iotControls' ? 'active' : ''}>
