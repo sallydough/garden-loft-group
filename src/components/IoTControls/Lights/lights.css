@@ -24,7 +24,7 @@ border-radius: 1rem;
 
 
 .control__card-light {
-background: var(--color-bg-variant);
+background: #F0F0F0;
 border: 1px solid transparent;
 border-radius: 6rem;
 padding: 2rem 1rem;

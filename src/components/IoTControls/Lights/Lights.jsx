@@ -19,7 +19,7 @@ const Lights = () => {
   };
 
   // array of devices and useState for Light button
-  const [light, setLight] = useState("Light Info");
+  const [light, setLight] = useState("");
 
   const handleLightChange = () => {
     const light = [
@@ -311,7 +311,9 @@ function toggleSwitch() {
         </article>
       </div>
 
-      <div className="lights-content">{light}</div>
+      <div className="lights-content">
+        {light}
+        </div>
 
       
     </section>
