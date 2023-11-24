@@ -12,8 +12,10 @@ import { styled } from "@mui/material";
 // import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 const Lights = () => {
+  
+  
   const iconStyle = {
-    fontSize: "70px",
+    fontSize: "80px",
   };
 
   // array of devices and useState for Light button
@@ -45,82 +47,21 @@ const Lights = () => {
 
     // maps through array of light devices and displays them in useState component {light} below
     const lightDeviceAll = light.map(({ id, name }) => {
+
       return (
-        <div key={id} className="device lock-content" style={lock ? greenBackground : greyBackground}>
-          <LightbulbIcon style={iconStyle} />
+        <div onClick={toggleSwitch} key={id} className="device" style={lock ? greenBackground : greyBackground}>
+          <LightbulbIcon onClick={handleLockChange()} style={iconStyle} />
           <h1>{name}</h1>
           <Stack direction="row" spacing={1} alignItems="center">
             <Typography>Off</Typography>
-            <AntSwitch onClick={handleLockChange} defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
+            <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
             <Typography>On</Typography>
           </Stack>
-          <div onClick={toggleSwitch} className='light-switch'>Change Light</div>
         </div>
       );
     });
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // const lightDeviceAll = light.map(({ id, name }) => {
-    //   return (
-    //     <div key={id} className="device lock-content"style={ lock ? greenBackground : greyBackground}>
-    //       <LightbulbIcon style={iconStyle} />
-    //       <h1>{name}</h1>
-    //     <Stack direction="row" spacing={1} alignItems="center">
-    //     <Typography>Off</Typography>
-    //     <AntSwitch onClick={handleLockChange} defaultChecked inputProps={{ 'aria-label': 'ant design' }}  />
-    //     <Typography>On</Typography>
-    //   </Stack>
-    //   <div onClick={toggleSwitch} className='light-switch'>Change Light</div>
-    //   </div>
-  
-    //   );
-    // });
-
     setLight(lightDeviceAll);
   };
-  // lock usestate
-  // useState for changing color of lock
-const [lock, setLock] = useState(false);
-
-let greenBackground = {
-  backgroundColor: 'green'
-}
-let greyBackground = {
-  backgroundColor: 'grey'
-}
-const handleLockChange = () => {
-  setLock(!lock)
-
-  if(lock) {
-    console.log("Lock is on")
-    // color to be green
-    // lockStyle.backgroundColor = 'green'
-  } else {
-    console.log("lock is off")
-    // lockStyle.backgroundColor = 'grey'
-    // color to be grey
-  }
-  // console.log("Lock is " + lock ? "on" : "off")
-};
 
   // toggle button of lock
   const AntSwitch = styled(Switch)(({ theme }) => ({
@@ -322,6 +263,31 @@ function toggleSwitch() {
   sendMessage(message);
   incrimentalId++;
 }
+
+  // useState for changing color of lock
+  const [lock, setLock] = useState(false);
+
+  let greenBackground = {
+    backgroundColor: '#00FF0A'
+  }
+  let greyBackground = {
+    backgroundColor: '#F0F0F0'
+  }
+  
+  const handleLockChange = () => {
+    setLock(!lock)
+  
+    if(lock) {
+      console.log("Lock is on")
+      // color to be green
+      // lockStyle.backgroundColor = 'green'
+    } else {
+      console.log("lock is off")
+      // lockStyle.backgroundColor = 'grey'
+      // color to be grey
+    }
+    // console.log("Lock is " + lock ? "on" : "off")
+  };
   
 
   return (

@@ -65,23 +65,10 @@ flex-direction:column;
 flex-wrap: wrap;
 justify-content: center;
 align-items: center;
+text-align: center;
 border-radius: 2rem;
 padding: 0 2rem;
 color: black;
 height: 50vh;
-/* width: 80vw; */
 }
 
-/* 
-
-.lock-content {
-display: flex;
-flex-direction: column;
-padding: 40px;
-background-color: rgb(103, 169, 5);
-width: 20vw;
-border-radius: 60px;
-align-items: center;
-height: 10vh;
-justify-content: center;
-} */

@@ -13,23 +13,35 @@
   align-content: center;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   text-align: center;
   font-size: 45px;
   background-color: rgb(140, 222, 233);
   border-radius: 1rem;
   height: 35vh;
-  padding: 20px 30px 20px 30px;
+  padding: 10px 30px 10px 30px;
   box-shadow: 14px 16px 15px 5px #062026
 
 }
 
 .contact-fav-card h3{
   font-size: 30px;
+  margin:0;
+}
+.contact-fav-card h1{
+  font-size: 40px;
+  margin:0;
+}
+
+.contact-fav-card p{
+  font-size: 30px;
+  margin:0;
 }
 
 .contact-info {
   color:rgb(34, 39, 49);
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
 }
 
 .contact-help {
@@ -37,11 +49,12 @@
   flex-direction: row;
   align-content: center;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   text-align: left;
-  font-size: 15px;
+  font-size: 45px;
   background-color: rgb(244, 149, 118);
   border-radius: 1rem;
-  padding: 20px 30px 20px 30px;
+  padding: 7px;
   box-shadow: 14px 16px 15px 5px #062026
 }
