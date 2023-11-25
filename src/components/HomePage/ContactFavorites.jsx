@@ -24,7 +24,7 @@ const ContactFavorites = () => {
       </div>
       <div className="contact-help">
         <div className="contact-info">
-          <h1>Call Help</h1>
+          <h1>Call Support</h1>
         </div>
         <div className="contact-image">
           <RingVolumeIcon style={iconStyle}/>
