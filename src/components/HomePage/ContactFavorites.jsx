@@ -17,7 +17,7 @@ const ContactFavorites = () => {
           <FaceIcon style={iconStyle}/>
         </div>
         <div className="contact-info">
-          <h1>Chitrah</h1>
+          <h1>Chitra</h1>
           <p>grand daughter</p>
           <h3>403-123-4567</h3>
         </div>
